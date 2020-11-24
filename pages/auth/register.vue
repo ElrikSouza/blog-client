@@ -70,20 +70,3 @@ export default Vue.extend({
   },
 });
 </script>
-
-<style scoped>
-.register__grid {
-  display: grid;
-  margin: auto;
-  height: 100%;
-  width: 100%;
-  max-width: 500px;
-  text-align: center;
-}
-
-.register__grid__title {
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  margin: auto;
-}
-</style>
