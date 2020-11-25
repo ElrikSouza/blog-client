@@ -1,7 +1,7 @@
 <template>
   <div class="create-post-grid">
     <h1>Publicar novo Post</h1>
-    <the-input v-model="postTitle" :placeholder="Titulo" />
+    <the-input v-model="postTitle" placeholder="Titulo" />
     <textarea v-model="postBody" placeholder="Corpo do post" />
     <the-button @click="submit">Criar</the-button>
   </div>
