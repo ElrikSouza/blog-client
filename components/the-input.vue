@@ -28,6 +28,9 @@ export default Vue.extend({
       value: '',
     };
   },
+  beforeMount() {
+    this.value = this.$attrs.value;
+  },
   methods: {
     onUpdateHandler(value: any) {
       this.value = value;
