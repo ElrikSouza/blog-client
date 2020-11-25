@@ -1,7 +1,7 @@
 <template>
   <div class="the-input__wrapper">
     <input
-      :value="value"
+      :value="$attrs.value"
       :type="type"
       :placeholder="placeholder"
       class="the-input"
@@ -27,9 +27,6 @@ export default Vue.extend({
     return {
       value: '',
     };
-  },
-  beforeMount() {
-    this.value = this.$attrs.value;
   },
   methods: {
     onUpdateHandler(value: any) {
