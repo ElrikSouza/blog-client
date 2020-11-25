@@ -19,6 +19,7 @@ import AuthGrid from '~/components/auth/auth-grid.vue';
 import ErrorList from '~/components/error-list.vue';
 import TheButton from '~/components/the-button.vue';
 import theInput from '~/components/the-input.vue';
+import { saveLoginToken } from '~/helpers/auth';
 
 export default Vue.extend({
   components: {
@@ -44,7 +45,8 @@ export default Vue.extend({
           password: this.password,
         });
 
-        localStorage.setItem('token', response.token);
+        saveLoginToken(response.token);
+
         this.$router.push('/posts');
       } catch (error) {
         this.errors = error?.response?.data?.message ?? [
